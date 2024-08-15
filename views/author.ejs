@@ -10,6 +10,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script
       <!--
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
@@ -81,7 +87,7 @@
             </div>
             <div class="left_2_1_box">
               <span>Freelance</span>
-              <a>unavailabe</a>
+              <strong style="color: #7eb942">Available</strong>
             </div>
             <div class="left_2_1_box">
               <span>Address</span>
@@ -97,14 +103,23 @@
             <div class="left_3_2_box">
               <span><%=user.language[0]%></span>
               <span>100%</span>
+              <div class="bar">
+                <div class="progress" style="width: 100%"></div>
+              </div>
             </div>
             <div class="left_3_2_box">
               <span><%=user.language[1]%></span>
               <span>80%</span>
+              <div class="bar">
+                <div class="progress" style="width: 80%"></div>
+              </div>
             </div>
             <div class="left_3_2_box">
               <span><%=user.language[2]%></span>
               <span>60%</span>
+              <div class="bar">
+                <div class="progress" style="width: 60%"></div>
+              </div>
             </div>
           </div>
           <div class="marginer"></div>
@@ -116,22 +131,37 @@
             <div class="left_4_1_box">
               <span><%=user.skills[0]%></span>
               <span>90%</span>
+              <div class="bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
             </div>
             <div class="left_4_1_box">
               <span><%=user.skills[1]%></span>
               <span>85%</span>
+              <div class="bar">
+                <div class="progress" style="width: 85%"></div>
+              </div>
             </div>
             <div class="left_4_1_box">
               <span><%=user.skills[2]%></span>
               <span>80%</span>
+              <div class="bar">
+                <div class="progress" style="width: 80%"></div>
+              </div>
             </div>
             <div class="left_4_1_box">
               <span><%=user.skills[3]%></span>
               <span>75%</span>
+              <div class="bar">
+                <div class="progress" style="width: 75%"></div>
+              </div>
             </div>
             <div class="left_4_1_box">
               <span><%=user.skills[4]%></span>
               <span>85%</span>
+              <div class="bar">
+                <div class="progress" style="width: 85%"></div>
+              </div>
             </div>
           </div>
           <div class="marginer"></div>
@@ -159,16 +189,18 @@
         <div class="midd_frame">
           <div class="top_container">
             <div class="header_container">
-              <span><%=user.work_place%> </span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusamus fuga delectus temporibus error repellat cum eum sit
-                commodi quas nostrum earum beatae modi omnis, atque sed tempora,
-                dignissimos aliquid at.
-              </p>
-              <button>Hire ME</button>
+              <div class="header_wrapper">
+                <span><%=user.work_place%> </span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Accusamus fuga delectus temporibus error repellat cum eum sit
+                  commodi quas nostrum earum beatae modi omnis, atque sed
+                  tempora, dignissimos aliquid at.
+                </p>
+                <button>Hire ME</button>
+              </div>
+              <img src="images/Your Image 1.png" width="326.055" height="446" />
             </div>
-            <img src="images/Your Image 1.png" />
           </div>
           <div class="bot_container">
             <div class="bot_box_1">
@@ -176,9 +208,9 @@
             </div>
             <div class="bot_box_2">
               <span
-                >Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit. lorem
-                ipsum</span
+                >Amet minim mollit non deserunt ullamco est sit aliqua <br />
+                dolor do amet sint. Velit officia consequat duis enim <br />
+                velit mollit. lorem ipsum</span
               >
             </div>
             <div class="bot_box_3">
@@ -187,27 +219,27 @@
                 <strong>Web Development</strong>
                 <span>blog, e-commerce</span>
               </div>
-              <div class="bot_box_3_2">
+              <div class="bot_box_3_1">
                 <img src="images/Icons_illustration.svg" />
                 <strong>uI/uX design</strong>
                 <span>Mobile app, website design</span>
               </div>
-              <div class="bot_box_3_3">
+              <div class="bot_box_3_1">
                 <img src="images/Icons_Microphone.svg" />
                 <strong>sound design</strong>
                 <span>Voice Over, Beat Making</span>
               </div>
-              <div class="bot_box_3_4">
+              <div class="bot_box_3_1">
                 <img src="images/Icons_game-development.svg" />
-                <strong>game design</strong>
+                <strong>Game design</strong>
                 <span>Character Design, Props & Objects</span>
               </div>
-              <div class="bot_box_3_5">
+              <div class="bot_box_3_1">
                 <img src="images/Icons_Photographer.svg" />
                 <strong>photography</strong>
                 <span>portrait, product photography</span>
               </div>
-              <div class="bot_box_3_6">
+              <div class="bot_box_3_1_1">
                 <strong>Advertising</strong>
                 <span
                   >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
