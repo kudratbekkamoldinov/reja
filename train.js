@@ -1,15 +1,68 @@
-// TASK B
-function countDigits(str) {
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (!isNaN(str[i])) {
-      count++;
-    }
+const moment = require("moment");
+
+class Shop {
+  constructor(pizza, burger, pepsi) {
+    this.inventory = {
+      pizza: pizza,
+      burger: burger,
+      pepsi: pepsi,
+    };
   }
-  return count;
+
+  getTime() {
+    return moment().format("HH:mm");
+  }
+
+  qoldiq() {
+    const { pizza, burger, pepsi } = this.inventory;
+    return `Hozir ${this.getTime()} da sizda ${pizza} ta pizza va ${burger} ta burger va ${pepsi} ta pepsi bor.`;
+  }
+
+  sotish(nomi, soni) {
+    if (!(nomi in this.inventory)) {
+      return "Mahsulot mavjud emas";
+    }
+
+    if (this.inventory[nomi] === 0) {
+      return `${nomi.charAt(0).toUpperCase() + nomi.slice(1)} qolmadi`;
+    }
+
+    if (this.inventory[nomi] < soni) {
+      return `Bunday miqdorda ${nomi} mavjud emas`;
+    }
+
+    this.inventory[nomi] -= soni;
+    return `Hozir ${this.getTime()} da ${soni} ${nomi} oldingiz!`;
+  }
+
+  qabul(nomi, soni) {
+    if (!(nomi in this.inventory)) {
+      return "Mahsulot mavjud emas";
+    }
+
+    this.inventory[nomi] += soni;
+    return `Hozir ${this.getTime()} da ${soni} ${nomi} qabul qildingiz!`;
+  }
 }
 
-console.log(countDigits("shh32r42"));
+// Example usage:
+const story = new Shop(18, 22, 50);
+console.log(story.qoldiq());
+console.log(story.qabul("burger", 10));
+console.log(story.qoldiq());
+
+// // TASK B
+// function countDigits(str) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (!isNaN(str[i])) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(countDigits("shh32r42"));
 
 // //   A TASK
 // function atask(w, word) {
