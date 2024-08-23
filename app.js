@@ -41,7 +41,7 @@ app.post("/create-item", (req, res) => {
 //   res.render("author", { user: user });
 // });
 
-app.post("delete-item", (req, res) => {
+app.post("/delete-item", (req, res) => {
   const id = req.body.id;
   db.collection("plans").deleteOne(
     { _id: new mongodb.ObjectId(id) },
