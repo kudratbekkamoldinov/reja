@@ -1,55 +1,67 @@
-const moment = require("moment");
+// TASK D
+function checksimilarity(word1, word2) {
+  let sorted1 = word1.split("").sort().join("");
+  let sorted2 = word2.split("").sort().join("");
 
-class Shop {
-  constructor(pizza, burger, pepsi) {
-    this.inventory = {
-      pizza: pizza,
-      burger: burger,
-      pepsi: pepsi,
-    };
+  if (sorted1 === sorted2) {
+    return true;
   }
-
-  getTime() {
-    return moment().format("HH:mm");
-  }
-
-  qoldiq() {
-    const { pizza, burger, pepsi } = this.inventory;
-    return `Hozir ${this.getTime()} da sizda ${pizza} ta pizza va ${burger} ta burger va ${pepsi} ta pepsi bor.`;
-  }
-
-  sotish(nomi, soni) {
-    if (!(nomi in this.inventory)) {
-      return "Mahsulot mavjud emas";
-    }
-
-    if (this.inventory[nomi] === 0) {
-      return `${nomi.charAt(0).toUpperCase() + nomi.slice(1)} qolmadi`;
-    }
-
-    if (this.inventory[nomi] < soni) {
-      return `Bunday miqdorda ${nomi} mavjud emas`;
-    }
-
-    this.inventory[nomi] -= soni;
-    return `Hozir ${this.getTime()} da ${soni} ${nomi} oldingiz!`;
-  }
-
-  qabul(nomi, soni) {
-    if (!(nomi in this.inventory)) {
-      return "Mahsulot mavjud emas";
-    }
-
-    this.inventory[nomi] += soni;
-    return `Hozir ${this.getTime()} da ${soni} ${nomi} qabul qildingiz!`;
-  }
+  return false;
 }
+console.log(checksimilarity("mit", "mit"));
 
-// Example usage:
-const story = new Shop(18, 22, 50);
-console.log(story.qoldiq());
-console.log(story.qabul("burger", 10));
-console.log(story.qoldiq());
+// const moment = require("moment");
+
+// class Shop {
+//   constructor(pizza, burger, pepsi) {
+//     this.inventory = {
+//       pizza: pizza,
+//       burger: burger,
+//       pepsi: pepsi,
+//     };
+//   }
+
+//   getTime() {
+//     return moment().format("HH:mm");
+//   }
+
+//   qoldiq() {
+//     const { pizza, burger, pepsi } = this.inventory;
+//     return `Hozir ${this.getTime()} da sizda ${pizza} ta pizza va ${burger} ta burger va ${pepsi} ta pepsi bor.`;
+//   }
+
+//   sotish(nomi, soni) {
+//     if (!(nomi in this.inventory)) {
+//       return "Mahsulot mavjud emas";
+//     }
+
+//     if (this.inventory[nomi] === 0) {
+//       return `${nomi.charAt(0).toUpperCase() + nomi.slice(1)} qolmadi`;
+//     }
+
+//     if (this.inventory[nomi] < soni) {
+//       return `Bunday miqdorda ${nomi} mavjud emas`;
+//     }
+
+//     this.inventory[nomi] -= soni;
+//     return `Hozir ${this.getTime()} da ${soni} ${nomi} oldingiz!`;
+//   }
+
+//   qabul(nomi, soni) {
+//     if (!(nomi in this.inventory)) {
+//       return "Mahsulot mavjud emas";
+//     }
+
+//     this.inventory[nomi] += soni;
+//     return `Hozir ${this.getTime()} da ${soni} ${nomi} qabul qildingiz!`;
+//   }
+// }
+
+// // Example usage:
+// const story = new Shop(18, 22, 50);
+// console.log(story.qoldiq());
+// console.log(story.qabul("burger", 10));
+// console.log(story.qoldiq());
 
 // // TASK B
 // function countDigits(str) {
