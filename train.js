@@ -1,14 +1,22 @@
-// TASK D
-function checksimilarity(word1, word2) {
-  let sorted1 = word1.split("").sort().join("");
-  let sorted2 = word2.split("").sort().join("");
-
-  if (sorted1 === sorted2) {
-    return true;
-  }
-  return false;
+// TASK-E
+function reversing(a) {
+  let word = a.split("").reverse().join("");
+  return word;
 }
-console.log(checksimilarity("mit", "mit"));
+
+console.log(reversing("Joseph"));
+
+// // TASK D
+// function checksimilarity(word1, word2) {
+//   let sorted1 = word1.split("").sort().join("");
+//   let sorted2 = word2.split("").sort().join("");
+
+//   if (sorted1 === sorted2) {
+//     return true;
+//   }
+//   return false;
+// }
+// console.log(checksimilarity("mit", "mit"));
 
 // const moment = require("moment");
 

@@ -2,6 +2,7 @@ console.log("FrontEnd JS ishga tushdi");
 
 function itemTemplate(item) {
   return `<li
+
     class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
   >
     <span class="item-text">${item.reja}</span>
@@ -25,6 +26,7 @@ function itemTemplate(item) {
 let createField = document.getElementById("create-field");
 
 document.getElementById("create-form").addEventListener("submit", function (e) {
+  // Traditional API to'xtatilyabdi
   e.preventDefault();
 
   axios
