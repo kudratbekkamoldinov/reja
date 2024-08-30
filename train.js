@@ -1,10 +1,24 @@
-// TASK-E
-function reversing(a) {
-  let word = a.split("").reverse().join("");
-  return word;
+// TASK-F
+function findDoublers(a) {
+  const checked = new Set();
+  for (const char of a) {
+    if (checked.has(char)) {
+      return true;
+    }
+    checked.add(char);
+  }
+  return false;
 }
 
-console.log(reversing("Joseph"));
+console.log(findDoublers("hello"));
+
+// // TASK-E
+// function reversing(a) {
+//   let word = a.split("").reverse().join("");
+//   return word;
+// }
+
+// console.log(reversing("Joseph"));
 
 // // TASK D
 // function checksimilarity(word1, word2) {
