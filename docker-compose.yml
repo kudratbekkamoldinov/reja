@@ -1,0 +1,19 @@
+version: "1.1"
+
+services:
+  node:
+    container_name: reja
+    restart: always
+    image: kudratbek/reja-image
+    ports:
+      - 4004:4000
+    volumes:
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+    networks:
+      - reja_network
+    command: bash -c "npm install && npm run dev"
+
+networks:
+  reja_network: # Fix 1: Correct indentation
+    driver: bridge # Fix 2: Correct indentation
