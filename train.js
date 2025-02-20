@@ -1,16 +1,19 @@
-// TASK-F
-function findDoublers(a) {
-  const checked = new Set();
-  for (const char of a) {
-    if (checked.has(char)) {
-      return true;
-    }
-    checked.add(char);
-  }
-  return false;
-}
 
-console.log(findDoublers("hello"));
+
+
+// // TASK-F
+// function findDoublers(a) {
+//   const checked = new Set();
+//   for (const char of a) {
+//     if (checked.has(char)) {
+//       return true;
+//     }
+//     checked.add(char);
+//   }
+//   return false;
+// }
+
+// console.log(findDoublers("hello"));
 
 // // TASK-E
 // function reversing(a) {
